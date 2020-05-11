@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ご利用アンケート</title>
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -38,7 +33,7 @@
             この度は、本書をご利用頂きありがとうございます。恐れ入りますが以下のフォームにご記入頂き、送信していただけると幸いです
           </p>
           <div class="form-group">
-            <label for="name>">お名前</label>
+            <label for="name>">お名前 <span class="badge badge-danger">必須</span></label>
             <input
               type="text"
               id="name"
@@ -48,7 +43,7 @@
             />
           </div>
           <div class="form-group">
-              <label for="job">ご職業</label>
+              <label for="job">ご職業<span class="badge badge-danger">必須</span></label>
               <select id="job" name="job" class="form-control">
                   <option value="">選択してください</option>
                   <option value="会社員">会社員</option>
@@ -58,43 +53,48 @@
           <div class="form-group">
               <label>知りたい内容(複数回答可)</label>
               <div class="checkbox">
-                  <label>
-                      <input type="checkbox" name="q1" value="html">
-                      HTML
-                  </label>
-                  <label>
-                    <input type="checkbox" name="q1" value="css">
-                    css
+                <label>
+                    <input type="checkbox" name="q1" value="html">
+                    HTML
                 </label>
                 <label>
-                  <input type="checkbox" name="q1" value="javascript">
-                  javascript
+                  <input type="checkbox" name="q1" value="css">
+                  css
+                </label>
+                <label>
+                <input type="checkbox" name="q1" value="javascript">
+                javascript
+                </label>
+              </div>
+          </div>
+          <div class="form-group">
+            <label>理解度はいかがですか？</label>
+            <div>
+              <label class="radio-inline">
+                <input type="radio" name="q2"
+                value="1">理解できなかった
               </label>
-              </div>
-              <div class="form-group">
-                <label>理解度はいかがですか？</label>
-                <div>
-                  <label class="radio-inline">
-                    <input type="radio" name="q2"
-                    value="1">理解できなかった
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="q2"
-                    value="2">大体理解できた
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="q2"
-                    value="3">理解できた
-                  </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="q2"
-                      value="4" checked>回答しない
-                    </label>
-                </div>
-              </div>
+              <label class="radio-inline">
+                <input type="radio" name="q2"
+                value="2">大体理解できた
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="q2"
+                value="3">理解できた
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="q2"
+                value="4" checked>回答しない
+              </label>
+            </div>
           </div>
+          <div class="form-group">
+            <label for="message">ご意見</label>
+            <textarea name="message" rows="5S"
+            class="form-control"></textarea>
           </div>
-          </div>
+          <button type="submit" class="btn btn-Dark">送信する</button>
+        </div>
       </form>
     </div>
     <hr />
